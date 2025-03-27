@@ -27,10 +27,12 @@ body {
     text-decoration: none;
     font-size: 1.2rem;
   }
+
   
   nav a:hover {
     text-decoration: underline;
   }
+
   
   /* Product List */
   .product-grid {
@@ -227,4 +229,108 @@ body {
   .clear-icon:hover {
     color: #333;
   }
-   
+
+  /* Cart Page */
+.cart-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 80%;
+  }
+  
+  .cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+  
+  .cart-details {
+    flex-grow: 1;
+    margin-left: 15px;
+  }
+  
+  .cart-details h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .cart-details p {
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .cart-item button {
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cart-item button:hover {
+    background: darkred;
+  }
+  
+  /* Add to Cart Button */
+  .add-to-cart {
+    background: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .add-to-cart:hover {
+    background: #0056b3;
+  }
+  
+  /* Search Bar */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-container input {
+    padding: 8px 40px 8px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 200px;
+  }
+  
+  .search-icon,
+  .clear-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #888;
+  }
+  
+  .search-icon {
+    right: 35px;
+  }
+  
+  .clear-icon:hover,
+  .search-icon:hover {
+    color: #333;
+  }
+  

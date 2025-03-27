@@ -6,7 +6,10 @@ function Navbar({ onSearch }) {
 
   const handleChange = (e) => {
     setSearch(e.target.value);
-    onSearch(e.target.value);
+  };
+
+  const handleSearchClick = () => {
+    onSearch(search);
   };
 
   const clearSearch = () => {
@@ -30,6 +33,7 @@ function Navbar({ onSearch }) {
           value={search}
           onChange={handleChange}
         />
+        <span className="search-icon" onClick={handleSearchClick}>🔍</span>
         {search && <span className="clear-icon" onClick={clearSearch}>✖</span>}
       </div>
     </nav>
@@ -37,4 +41,6 @@ function Navbar({ onSearch }) {
 }
 
 export default Navbar;
+
+
 

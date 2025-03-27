@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-function ProductDetail() {
+function ProductDetail({ addToCart }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
@@ -23,15 +23,19 @@ function ProductDetail() {
   if (!product) return <p>Loading...</p>;
 
   return (
-    <div>
-      <button onClick={() => navigate(-1)}>Back</button>
-      <h2>{product.title}</h2>
-      <img src={product.image} alt={product.title} />
-      <p>{product.description}</p>
-      <p>Price: ${product.price}</p>
-      <p>⭐ {product.rating?.rate} ({product.rating?.count})</p>
+    <div className="product-detail-container">
+      <button className="back-button" onClick={() => navigate(-1)}>Back</button>
+      <img src={product.image} alt={product.title} className="product-detail-img" />
+      <div className="product-detail-text">
+        <h2>{product.title}</h2>
+        <p>{product.description}</p>
+        <p>Price: ${product.price}</p>
+        <p>⭐ {product.rating?.rate} ({product.rating?.count})</p>
+        <button className="add-to-cart" onClick={() => addToCart(product)}>Add to Cart</button>
+      </div>
     </div>
   );
 }
 
 export default ProductDetail;
+
