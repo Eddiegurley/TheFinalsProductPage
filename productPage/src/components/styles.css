@@ -85,7 +85,7 @@ body {
     padding: 20px;
   }
   
-  .product-detail img {
+  .product-detail-img {
     width: 200px;
     height: 200px;
     object-fit: contain;
@@ -333,4 +333,5 @@ body {
   .search-icon:hover {
     color: #333;
   }
+  
   
